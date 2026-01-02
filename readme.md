@@ -1,7 +1,3 @@
-Here is a structured, professional `README.md` file tailored specifically for your project. You can copy and paste this directly into your GitHub repository or project folder.
-
----
-
 # 👨‍💻 Vishal Kumar | AI & ML Portfolio
 
 A modern, responsive personal portfolio website designed for an AI & Machine Learning engineer. This project features a **Dark Mode** aesthetic with **Glassmorphism** UI elements, built using HTML, JavaScript, and Tailwind CSS.
