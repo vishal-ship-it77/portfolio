@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Kumar | AI & ML Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deep: '#213448',   /* Dark Background */
+                        mid: '#547792',    /* Muted Blue / Cards */
+                        light: '#94B4C1',  /* Accents / Borders */
+                        cream: '#EAE0CF',  /* Text / Highlights */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #213448;
+            color: #EAE0CF;
+            font-family: 'Inter', sans-serif;
+        }
+        /* Dark Mode Glassmorphism */
+        .glass-panel {
+            background: rgba(84, 119, 146, 0.15); /* Based on #547792 */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 180, 193, 0.2); /* Based on #94B4C1 */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+        .glass-nav {
+            background: rgba(33, 52, 72, 0.85); /* Based on #213448 */
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(148, 180, 193, 0.1);
+        }
+        .glass-mobile {
+            background: rgba(33, 52, 72, 0.98);
+            backdrop-filter: blur(12px);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #213448;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #547792;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94B4C1;
+        }
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="selection:bg-light selection:text-deep overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 px-4 py-4 md:px-6 md:py-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center glass-panel rounded-full px-6 py-3">
+            <a href="#home" class="text-xl font-black tracking-tighter text-cream z-50 relative">
+                VISHAL<span class="text-light"> KUMAR</span>
+            </a>
+
+            <div class="space-x-8 hidden md:flex font-medium text-sm tracking-wide text-cream/80">
+                <a href="#home" class="hover:text-light transition-colors">Home</a>
+                <a href="#about" class="hover:text-light transition-colors">About</a>
+                <a href="#skills" class="hover:text-light transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-light transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-light transition-colors">Contact</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden z-50 text-cream focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 glass-mobile flex flex-col justify-center items-center space-y-8 translate-x-full md:hidden z-40">
+            <a href="#home" class="text-cream text-2xl font-bold hover:text-light transition-colors mobile-link">Home</a>
+            <a href="#about" class="text-cream text-2xl font-bold hover:text-light transition-colors mobile-link">About</a>
+            <a href="#skills" class="text-cream text-2xl font-bold hover:text-light transition-colors mobile-link">Skills</a>
+            <a href="#projects" class="text-cream text-2xl font-bold hover:text-light transition-colors mobile-link">Projects</a>
+            <a href="#contact" class="text-cream text-2xl font-bold hover:text-light transition-colors mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        <div class="relative w-full max-w-4xl mx-auto">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-72 bg-mid/40 rounded-full blur-[100px] -z-10"></div>
+            
+            <div class="glass-panel p-8 md:p-12 rounded-[2.5rem]">
+                
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-mid/20 text-light font-bold text-xs uppercase tracking-wider mb-6 border border-mid/30">
+                    <span class="relative flex h-2.5 w-2.5">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-light opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-light"></span>
+                    </span>
+                    Available for Internship
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black mb-6 text-cream leading-[1.1] tracking-tight">
+                    Innovating with <br> 
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-light to-mid">Intelligence.</span>
+                </h1>
+                <p class="text-lg text-cream/70 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    I design intelligent algorithms and scalable web systems. Bridging the gap between 
+                    <strong class="text-light">Complex Data</strong> and <strong class="text-light">User Experience</strong>.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#projects" class="bg-cream text-deep px-8 py-4 rounded-xl font-bold hover:bg-light transition-colors shadow-lg shadow-light/10">
+                        View Work <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#contact" class="border-2 border-light text-light px-8 py-4 rounded-xl font-bold hover:bg-light hover:text-deep transition-all">
+                        Let's Talk
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="glass-panel rounded-[2.5rem] p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-mid/20 rounded-[2rem] rotate-3 blur-md transition group-hover:rotate-0 duration-500"></div>
+                        
+                        <div class="relative w-full aspect-square rounded-[2rem] overflow-hidden shadow-2xl border-4 border-light/20">
+                             <img src="image.png" 
+                                  alt="Vishal Kumar" 
+                                  class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700 opacity-90 group-hover:opacity-100">
+                        </div>
+                    </div>
+
+                    <div class="text-left">
+                        <span class="text-light font-bold tracking-widest uppercase text-sm mb-2 block">Who I Am</span>
+                        <h2 class="text-4xl md:text-5xl font-black text-cream mb-6">
+                            Hello, I'm <span class="text-light">Vishal Kumar</span>
+                        </h2>
+                        
+                        <div class="space-y-6 text-cream/80 text-lg leading-relaxed">
+                            <p>
+                                I am a passionate <strong>3rd-year B.Tech student</strong> specializing in Artificial Intelligence and Machine Learning. My journey involves translating complex mathematical concepts into functional, efficient code.
+                            </p>
+                            <p>
+                                Beyond just coding, I focus on building systems that solve real-world problems. Whether it's training deep learning models or architecting secure backend databases, I am driven by curiosity and the desire to create impact.
+                            </p>
+                        </div>
+
+                        <div class="mt-8 grid grid-cols-2 gap-4">
+                            <div class="bg-mid/20 p-4 rounded-xl border border-light/10">
+                                <span class="block text-3xl font-black text-light mb-1">3+</span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-cream/60">Years Coding</span>
+                            </div>
+                            <div class="bg-mid/20 p-4 rounded-xl border border-light/10">
+                                <span class="block text-3xl font-black text-light mb-1">15+</span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-cream/60">Projects Built</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-black text-cream mb-6">My Tech Stack</h3>
+                    <p class="text-cream/70 mb-8 leading-relaxed">
+                        I specialize in building full-stack applications powered by AI. I focus on writing clean, efficient code for complex problems.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2 font-bold text-sm text-cream">
+                                <span><i class="fa-brands fa-python mr-2 text-light"></i> Python & AI/ML</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="h-3 bg-deep rounded-full overflow-hidden border border-mid/30">
+                                <div class="h-full bg-light w-[90%] rounded-full shadow-[0_0_10px_rgba(148,180,193,0.5)]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2 font-bold text-sm text-cream">
+                                <span><i class="fa-solid fa-code mr-2 text-light"></i> Web Dev (HTML/CSS/JS)</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="h-3 bg-deep rounded-full overflow-hidden border border-mid/30">
+                                <div class="h-full bg-mid w-[85%] rounded-full"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2 font-bold text-sm text-cream">
+                                <span><i class="fa-solid fa-database mr-2 text-light"></i> Database (SQL/DBMS)</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="h-3 bg-deep rounded-full overflow-hidden border border-mid/30">
+                                <div class="h-full bg-cream/50 w-[80%] rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-3xl grid grid-cols-2 gap-4">
+                    <div class="bg-mid/20 p-6 rounded-xl text-center hover:bg-mid/40 transition group border border-light/5">
+                        <i class="fa-brands fa-python text-4xl mb-2 text-light group-hover:scale-110 transition-transform block"></i>
+                        <span class="font-bold text-cream text-sm">Python</span>
+                    </div>
+                    <div class="bg-mid/20 p-6 rounded-xl text-center hover:bg-mid/40 transition group border border-light/5">
+                        <i class="fa-brands fa-react text-4xl mb-2 text-light group-hover:scale-110 transition-transform block"></i>
+                        <span class="font-bold text-cream text-sm">React/Node</span>
+                    </div>
+                    <div class="bg-mid/20 p-6 rounded-xl text-center hover:bg-mid/40 transition group border border-light/5">
+                        <i class="fa-solid fa-brain text-4xl mb-2 text-light group-hover:scale-110 transition-transform block"></i>
+                        <span class="font-bold text-cream text-sm">TensorFlow</span>
+                    </div>
+                    <div class="bg-mid/20 p-6 rounded-xl text-center hover:bg-mid/40 transition group border border-light/5">
+                        <i class="fa-solid fa-database text-4xl mb-2 text-light group-hover:scale-110 transition-transform block"></i>
+                        <span class="font-bold text-cream text-sm">MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 relative">
+        <div class="absolute inset-0 bg-black/10 skew-y-3 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-light font-bold tracking-widest uppercase text-sm">Portfolio</span>
+                <h3 class="text-4xl font-black text-cream mt-2">Featured Projects</h3>
+                <div class="h-1.5 w-20 bg-mid mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-panel p-8 rounded-3xl group hover:shadow-2xl hover:shadow-mid/20 transition-all duration-500 flex flex-col hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-2xl bg-mid flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-mid/30 text-cream">
+                        <i class="fa-solid fa-magnifying-glass-chart text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3 text-cream">Algorithm Analysis</h4>
+                    <p class="text-cream/70 mb-6 text-sm leading-relaxed flex-grow">Optimization of search algorithms for large scale DBMS datasets. Improved query speeds by 40%.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-[10px] uppercase tracking-widest font-bold bg-cream text-deep px-3 py-1 rounded-full">DAA</span>
+                        <span class="text-[10px] uppercase tracking-widest font-bold bg-mid/50 text-cream px-3 py-1 rounded-full border border-mid">Python</span>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-3xl group hover:shadow-2xl hover:shadow-mid/20 transition-all duration-500 flex flex-col hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-2xl bg-mid flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-mid/30 text-cream">
+                        <i class="fa-solid fa-magnifying-glass-chart text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3 text-cream">Algorithm Analysis</h4>
+                    <p class="text-cream/70 mb-6 text-sm leading-relaxed flex-grow">Optimization of search algorithms for large scale DBMS datasets. Improved query speeds by 40%.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-[10px] uppercase tracking-widest font-bold bg-cream text-deep px-3 py-1 rounded-full">DAA</span>
+                        <span class="text-[10px] uppercase tracking-widest font-bold bg-mid/50 text-cream px-3 py-1 rounded-full border border-mid">Python</span>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-3xl group hover:shadow-2xl hover:shadow-mid/20 transition-all duration-500 flex flex-col hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-2xl bg-mid flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-mid/30 text-cream">
+                        <i class="fa-solid fa-shield-halved text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3 text-cream">Secure Database</h4>
+                    <p class="text-cream/70 mb-6 text-sm leading-relaxed flex-grow">Scalable backend architecture designed for high-concurrency applications with encrypted storage.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-[10px] uppercase tracking-widest font-bold bg-cream text-deep px-3 py-1 rounded-full">DBMS</span>
+                        <span class="text-[10px] uppercase tracking-widest font-bold bg-mid/50 text-cream px-3 py-1 rounded-full border border-mid">SQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="glass-panel rounded-[2.5rem] p-8 md:p-12 text-center relative overflow-hidden">
+            <div class="absolute -right-20 -top-20 w-64 h-64 bg-mid/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <h3 class="text-4xl font-black text-cream mb-4">Let's Work Together</h3>
+            <p class="text-cream/70 mb-8 max-w-lg mx-auto">I am currently available for freelance work and internships. Drop a message or email me directly.</p>
+            
+            <form class="max-w-md mx-auto space-y-4 text-left">
+                <div class="relative">
+                    <i class="fa-solid fa-user absolute left-4 top-4 text-light"></i>
+                    <input type="text" placeholder="Your Name" class="w-full pl-12 pr-6 py-4 rounded-xl bg-deep/50 border border-mid/30 focus:outline-none focus:ring-2 focus:ring-light/50 placeholder-cream/30 text-cream">
+                </div>
+                <div class="relative">
+                    <i class="fa-solid fa-envelope absolute left-4 top-4 text-light"></i>
+                    <input type="email" placeholder="Your Email" class="w-full pl-12 pr-6 py-4 rounded-xl bg-deep/50 border border-mid/30 focus:outline-none focus:ring-2 focus:ring-light/50 placeholder-cream/30 text-cream">
+                </div>
+                <div class="relative">
+                    <i class="fa-solid fa-comment absolute left-4 top-4 text-light"></i>
+                    <textarea rows="3" placeholder="Message" class="w-full pl-12 pr-6 py-4 rounded-xl bg-deep/50 border border-mid/30 focus:outline-none focus:ring-2 focus:ring-light/50 placeholder-cream/30 text-cream"></textarea>
+                </div>
+                <button type="button" class="w-full bg-light text-deep font-bold py-4 rounded-xl hover:bg-cream transition-colors shadow-lg shadow-light/20">
+                    Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
+                </button>
+            </form>
+
+            <div class="mt-10 flex justify-center gap-6">
+                <a href="mailto:vp2699884@gmail.com" class="flex items-center gap-2 text-cream font-medium hover:text-light transition">
+                    <i class="fa-solid fa-envelope"></i> vp2699884@gmail.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-black/20 text-cream border-t border-mid/20">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <h4 class="text-2xl font-bold tracking-tighter">VISHAL<span class="text-light"> KUMAR</span></h4>
+                <p class="opacity-60 text-sm mt-2">© 2024. All rights reserved.</p>
+            </div>
+            <div class="flex gap-8 font-medium">
+                <a href="https://github.com/vishal-ship-it77" class="hover:text-light transition-colors"><i class="fa-brands fa-github text-xl"></i></a>
+                <a href="https://www.linkedin.com/in/vishal-kumar-115337339/" class="hover:text-light transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                <a href="Resume.pdf" target="_blank" class="hover:text-light transition-colors"><i class="fa-solid fa-file-pdf text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            const icon = menuBtn.querySelector('i');
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('translate-x-full');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                mobileMenu.classList.add('translate-x-full');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.classList.add('translate-x-full');
+                const icon = menuBtn.querySelector('i');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
